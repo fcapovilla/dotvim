@@ -41,9 +41,9 @@ set complete-=i
 "persistent undo
 if has("persistent_undo")
     if has("unix")
-        set undodir=~/.vim/undo
+        set undodir=~/.vim/tmp/undo
     elseif has("win32")
-        set undodir=$HOME/vimfiles/undo
+        set undodir=$HOME/vimfiles/tmp/undo
     endif
     set undofile
     set undolevels=1000
