@@ -1,0 +1,69 @@
+[submodule "bundle/csv.vim"]
+	path = bundle/csv.vim
+	url = git://github.com/vim-scripts/csv.vim.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/vim-scripts/fugitive.vim.git
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = git://github.com/gregsexton/gitv.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = git://github.com/vim-scripts/Gundo.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/perl-support"]
+	path = bundle/perl-support
+	url = git://github.com/vim-scripts/perl-support.vim.git
+[submodule "bundle/rails.vim"]
+	path = bundle/rails.vim
+	url = git://github.com/vim-scripts/rails.vim.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = git://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/repmo"]
+	path = bundle/repmo
+	url = git://github.com/vim-scripts/repmo.vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = git://github.com/vim-scripts/Solarized.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/vim-scripts/surround.vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/vim-scripts/Tabular.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/vim-scripts/Tagbar.git
+[submodule "bundle/bad-whitespace"]
+	path = bundle/bad-whitespace
+	url = git://github.com/bitc/vim-bad-whitespace.git
+[submodule "bundle/nerdtree-tabs"]
+	path = bundle/nerdtree-tabs
+	url = git://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/vim-perl"]
+	path = bundle/vim-perl
+	url = git://github.com/petdance/vim-perl.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = git://github.com/vim-scripts/ZenCoding.vim.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/vim-scripts/matchit.zip.git
