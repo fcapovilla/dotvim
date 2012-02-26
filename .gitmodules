@@ -73,3 +73,6 @@
 [submodule "bundle/largefile"]
 	path = bundle/largefile
 	url = git://github.com/vim-scripts/LargeFile.git
+[submodule "bundle/vim-symfony2"]
+	path = bundle/vim-symfony2
+	url = git://github.com/docteurklein/vim-symfony.git
