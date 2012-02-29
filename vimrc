@@ -6,7 +6,6 @@ call pathogen#runtime_append_all_bundles()
 
 "Filetypes (for snippets)
 au BufNewFile,BufRead *.csv set ft=csv
-au BufNewFile,BufRead *.php set ft=php.html.javascript
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
