@@ -10,9 +10,6 @@ au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
 
-" Indent detection
-au BufReadPost * :DetectIndent
-
 " Color Scheme
 let g:solarized_termcolors=16
 let g:solarized_termtrans=0

@@ -73,6 +73,3 @@
 [submodule "bundle/largefile"]
 	path = bundle/largefile
 	url = git://github.com/vim-scripts/LargeFile.git
-[submodule "bundle/detectindent"]
-	path = bundle/detectindent
-	url = git://github.com/ciaranm/detectindent.git
