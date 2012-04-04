@@ -73,3 +73,6 @@
 [submodule "bundle/largefile"]
 	path = bundle/largefile
 	url = git://github.com/vim-scripts/LargeFile.git
+[submodule "bundle/jinja"]
+	path = bundle/jinja
+	url = git://github.com/vim-scripts/Jinja.git
