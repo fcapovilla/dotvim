@@ -6,6 +6,7 @@ call pathogen#runtime_append_all_bundles()
 
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.csv set ft=csv
+au BufNewFile,BufRead *.twig set ft=htmljinja
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
@@ -91,7 +92,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
-set expandtab
+"set expandtab
 
 " Search
 "nnoremap / /\v
@@ -156,4 +157,5 @@ inoremap  <right>  <nop>
 " Macros
 " Commentaire Libeo Perl
 let @l = 'dO100i#o# Libeo - o$€kb# Libeo - o100i#o€ku€ku€kuo€kup€kuo€kup`[v`]\cc'
-
+" Builder Vibeo
+let @w = ':w:!python ~/www/mediaelement/src/Builder.py'
