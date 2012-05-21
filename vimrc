@@ -82,6 +82,7 @@ set number
 syntax on
 set showcmd
 set mouse=a
+set ttymouse=xterm2
 set tabpagemax=50
 set scrolloff=5
 set listchars=tab:▸\ ,eol:¬
