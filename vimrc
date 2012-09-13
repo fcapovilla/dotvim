@@ -35,7 +35,6 @@ elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
 let g:svndiff_autoupdate = 1
-let g:Powerline_symbols = 'fancy'
 
 " Basic config
 set nocompatible
