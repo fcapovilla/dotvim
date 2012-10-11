@@ -15,6 +15,16 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+" Read odt, doc and pdf files in vim
+au BufReadPre *.doc set ro
+au BufReadPost *.doc %!antiword "%"
+
+au BufReadPre *.odt set ro
+au BufReadPost *.odt %!odt2txt --width=-1 "%"
+
+au BufReadPre *.pdf set ro
+au BufReadPost *.pdf %!pdftotext "%" -
+
 " Color Scheme
 let g:solarized_termcolors=16
 let g:solarized_termtrans=0
@@ -39,7 +49,7 @@ elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
 let g:svndiff_autoupdate = 1
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
 " Basic config
 set nocompatible
