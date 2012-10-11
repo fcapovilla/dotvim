@@ -15,12 +15,12 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
-" Read odt, doc and pdf files in vim
+" Read odt, sxw, doc and pdf files in vim
 au BufReadPre *.doc set ro
 au BufReadPost *.doc %!antiword "%"
 
-au BufReadPre *.odt set ro
-au BufReadPost *.odt %!odt2txt --width=-1 "%"
+au BufReadPre *.odt,*.sxw set ro
+au BufReadPost *.odt,*.sxw %!odt2txt --width=-1 "%"
 
 au BufReadPre *.pdf set ro
 au BufReadPost *.pdf %!pdftotext "%" -
