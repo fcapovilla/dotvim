@@ -175,3 +175,7 @@ inoremap  <right>  <nop>
 let @l = 'dO100i#o# Libeo - o$€kb# Libeo - o100i#o€ku€ku€kuo€kup€kuo€kup`[v`]\cc'
 " Builder Vibeo
 let @w = ':w:!python ~/www/mediaelement/src/Builder.py'
+
+if filereadable(glob("~/.vim/vimrc.local"))
+	so ~/.vim/vimrc.local
+endif
