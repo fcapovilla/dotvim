@@ -52,7 +52,7 @@ if has("unix")
 elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
-let g:svndiff_autoupdate = 1
+let g:gitgutter_enabled = 0
 
 " Basic config
 set nocompatible
@@ -147,9 +147,9 @@ map <F7> :bprevious<cr>
 vmap <F7> <esc>:bprevious<cr>
 imap <F7> <esc>:bprevious<cr>
 
-map <S-F7> :call Svndiff("next")<cr>
-vmap <S-F7> <esc>:call Svndiff("next")<cr>
-imap <S-F7> <esc>:call Svndiff("next")<cr>
+map <S-F7> :GitGutterToggle<cr>
+vmap <S-F7> <esc>:GitGutterToggle<cr>
+imap <S-F7> <esc>:GitGutterToggle<cr>
 
 map <F8> :bnext<cr>
 vmap <F8> <esc>:bnext<cr>
