@@ -76,9 +76,6 @@
 [submodule "bundle/htmljinja"]
 	path = bundle/htmljinja
 	url = git://github.com/ocim/htmljinja.vim.git
-[submodule "bundle/typoscript"]
-	path = bundle/typoscript
-	url = git://github.com/nebelschwade/typoscript-vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = git://github.com/thisivan/vim-bufexplorer.git
