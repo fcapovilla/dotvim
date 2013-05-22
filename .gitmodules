@@ -70,12 +70,6 @@
 [submodule "bundle/largefile"]
 	path = bundle/largefile
 	url = git://github.com/vim-scripts/LargeFile.git
-[submodule "bundle/jinja"]
-	path = bundle/jinja
-	url = git://github.com/vim-scripts/Jinja.git
-[submodule "bundle/htmljinja"]
-	path = bundle/htmljinja
-	url = git://github.com/ocim/htmljinja.vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = git://github.com/thisivan/vim-bufexplorer.git
