@@ -28,9 +28,6 @@
 [submodule "bundle/repmo"]
 	path = bundle/repmo
 	url = git://github.com/vim-scripts/repmo.vim.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/vim-scripts/Solarized.git
