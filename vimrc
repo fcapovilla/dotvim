@@ -54,6 +54,9 @@ elseif has("win32")
 endif
 let g:gitgutter_enabled = 0
 
+vmap <Enter> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+
 " Basic config
 set nocompatible
 set modelines=0
