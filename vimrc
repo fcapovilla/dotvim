@@ -11,6 +11,7 @@ au BufNewFile,BufRead * exe "sign place 999999 line=1 name=file_start file=" . e
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.csv set ft=csv
 au BufNewFile,BufRead *.twig set ft=htmljinja
+au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript

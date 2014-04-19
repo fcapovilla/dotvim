@@ -94,3 +94,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "bundle/textile"]
+	path = bundle/textile
+	url = https://github.com/timcharper/textile.vim.git
