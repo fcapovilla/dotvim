@@ -86,9 +86,9 @@ endif
 set bs=indent,eol,start
 
 " Statusline
-set statusline=%<%F%m%r%h%w\ %y\ A=\%b\ H=\%b\ %{&fenc}
-set statusline+=%=\ (%l,%c)\ %P
-set statusline+=\ %{fugitive#statusline()}
+"set statusline=%<%F%m%r%h%w\ %y\ A=\%b\ H=\%b\ %{&fenc}
+"set statusline+=%=\ (%l,%c)\ %P
+"set statusline+=\ %{fugitive#statusline()}
 set laststatus=2
 
 " Editor config
@@ -134,6 +134,16 @@ map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
 imap <F5> <esc>:NERDTreeTabsToggle<cr>
 
+" F6 used by CTRL-P
+
+map <F7> :bprevious<cr>
+vmap <F7> <esc>:bprevious<cr>
+imap <F7> <esc>:bprevious<cr>
+
+map <F8> :bnext<cr>
+vmap <F8> <esc>:bnext<cr>
+imap <F8> <esc>:bnext<cr>
+
 map <S-F5> :GundoToggle<cr>
 vmap <S-F5> <esc>:GundoToggle<cr>
 imap <S-F5> <esc>:GundoToggle<cr>
@@ -142,17 +152,9 @@ map <S-F6> :TagbarToggle<cr>
 vmap <S-F6> <esc>:TagbarToggle<cr>
 imap <S-F6> <esc>:TagbarToggle<cr>
 
-map <F7> :bprevious<cr>
-vmap <F7> <esc>:bprevious<cr>
-imap <F7> <esc>:bprevious<cr>
-
 map <S-F7> :GitGutterToggle<cr>
 vmap <S-F7> <esc>:GitGutterToggle<cr>
 imap <S-F7> <esc>:GitGutterToggle<cr>
-
-map <F8> :bnext<cr>
-vmap <F8> <esc>:bnext<cr>
-imap <F8> <esc>:bnext<cr>
 
 " Disable arrows
 inoremap  <up>     <nop>
@@ -179,5 +181,5 @@ let @l = 'dO100i#o# Libeo - o$€kb# Libeo - o100i#o€ku€ku€kuo€kup€kuo€k
 let @w = ':w:!python ~/www/mediaelement/src/Builder.py'
 
 if filereadable(glob("~/.vim/vimrc.local"))
-	so ~/.vim/vimrc.local
+    so ~/.vim/vimrc.local
 endif
