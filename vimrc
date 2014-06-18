@@ -1,8 +1,4 @@
-" Pathogen
-filetype off
-call pathogen#helptags()
-filetype plugin indent on
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.csv set ft=csv
