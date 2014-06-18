@@ -4,10 +4,6 @@ call pathogen#helptags()
 filetype plugin indent on
 call pathogen#runtime_append_all_bundles()
 
-" Correction vim-gutter pour éviter les flicker
-sign define file_start text=o texthl=FileStart
-au BufNewFile,BufRead * exe "sign place 999999 line=1 name=file_start file=" . expand("%:p")
-
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.csv set ft=csv
 au BufNewFile,BufRead *.twig set ft=htmljinja
@@ -53,7 +49,6 @@ if has("unix")
 elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
-let g:gitgutter_enabled = 0
 
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
