@@ -125,6 +125,7 @@ set tags=tags;~
 
 " Button mapping
 inoremap jj <esc>
+nnoremap <Space> za
 
 map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
