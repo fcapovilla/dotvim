@@ -7,10 +7,11 @@ au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 " Read odt, sxw, doc and pdf files in vim
 au BufReadPre *.doc set ro
@@ -32,7 +33,8 @@ colorscheme solarized
 " Plugins config
 "let g:Perl_PerlTags = 'on'
 let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:phpcomplete_index_composer_command = "composer"
 let g:ctrlp_map = '<f6>'
 let g:ctrlp_persistent_input = 0
 let g:ctrlp_by_filename = 1
