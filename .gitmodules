@@ -136,3 +136,6 @@
 [submodule "bundle/vim-coloresque"]
 	path = bundle/vim-coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
