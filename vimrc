@@ -7,6 +7,7 @@ au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
