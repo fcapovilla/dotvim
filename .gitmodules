@@ -139,3 +139,6 @@
 [submodule "bundle/vim-elixir"]
 	path = bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "bundle/alchemist.vim"]
+	path = bundle/alchemist.vim
+	url = https://github.com/slashmili/alchemist.vim
