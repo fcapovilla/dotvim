@@ -1,6 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'bitc/vim-bad-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -34,6 +32,16 @@ Plug 'mg979/vim-visual-multi'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'mattn/emmet-vim'
 Plug 'chrisbra/csv.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'yaegassy/coc-html-css-support', {'do': 'yarn install --frozen-lockfile'}
+Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'}
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install --frozen-lockfile && yarn prepack'}
 call plug#end()
 
 " Filetypes (for snippets)
