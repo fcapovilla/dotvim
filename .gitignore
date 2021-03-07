@@ -1,5 +1,2 @@
-tmp/**/*
-!tmp/undo/0
-!tmp/backup/0
-!tmp/swp/0
 vimrc.local
+plugged
