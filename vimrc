@@ -185,10 +185,10 @@ vmap <S-F7> <esc>:SignifyToggle<cr>
 imap <S-F7> <esc>:SignifyToggle<cr>
 
 " Disable arrows
-inoremap  <up>     <nop>
-inoremap  <down>   <nop>
-inoremap  <left>   <nop>
-inoremap  <right>  <nop>
+"inoremap  <up>     <nop>
+"inoremap  <down>   <nop>
+"inoremap  <left>   <nop>
+"inoremap  <right>  <nop>
 "noremap   <up>     <nop>
 "noremap   <down>   <nop>
 "noremap   <left>   <nop>
@@ -209,10 +209,14 @@ endif
 
 " === CoC Configuration ===
 
+call coc#config('suggest.autoTrigger', 'none')
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
+
+" TextEdit might fail if hidden is not set.
+set hidden
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -250,6 +254,11 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
