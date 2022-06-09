@@ -52,6 +52,7 @@ au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+filetype plugin indent on
 
 " Read odt, sxw, doc and pdf files in vim
 au BufReadPre *.doc set ro
@@ -129,7 +130,9 @@ set number
 syntax on
 set showcmd
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 set tabpagemax=50
 set scrolloff=5
 set listchars=tab:▸\ ,eol:¬
