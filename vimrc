@@ -179,13 +179,17 @@ map <S-F5> :UndotreeToggle<cr>
 vmap <S-F5> <esc>:UndotreeToggle<cr>
 imap <S-F5> <esc>:UndotreeToggle<cr>
 
-map <S-F6> :TagbarToggle<cr>
-vmap <S-F6> <esc>:TagbarToggle<cr>
-imap <S-F6> <esc>:TagbarToggle<cr>
+map <S-F6> :CocSearch 
+vmap <S-F6> <esc>:CocSearch 
+imap <S-F6> <esc>:CocSearch 
 
 map <S-F7> :SignifyToggle<cr>
 vmap <S-F7> <esc>:SignifyToggle<cr>
 imap <S-F7> <esc>:SignifyToggle<cr>
+
+map <S-F8> :TagbarToggle<cr>
+vmap <S-F8> <esc>:TagbarToggle<cr>
+imap <S-F8> <esc>:TagbarToggle<cr>
 
 " Disable arrows
 "inoremap  <up>     <nop>
