@@ -31,7 +31,7 @@ Plug 'mhinz/vim-signify'
 Plug 'mg979/vim-visual-multi'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'mattn/emmet-vim'
-Plug 'chrisbra/csv.vim'
+Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
@@ -45,7 +45,6 @@ Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install --frozen-lockfile && yarn pre
 call plug#end()
 
 " Filetypes (for snippets)
-au BufNewFile,BufRead *.csv set ft=csv
 au BufNewFile,BufRead *.twig set ft=htmljinja
 au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
@@ -65,8 +64,6 @@ au BufReadPre *.pdf set ro
 au BufReadPost *.pdf %!pdftotext "%" -
 
 " Color Scheme
-let g:solarized_termcolors=16
-let g:solarized_termtrans=0
 let g:solarized_italic=0
 set background=dark
 colorscheme solarized
@@ -211,6 +208,12 @@ imap <S-F8> <esc>:TagbarToggle<cr>
 
 if filereadable(glob("~/.vim/vimrc.local"))
     so ~/.vim/vimrc.local
+endif
+
+if executable('ag')
+    set grepprg=ag\ --vimgrep\ $*
+    set grepformat^=%f:%l:%c:%m
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 
