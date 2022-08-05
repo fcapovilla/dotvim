@@ -11,7 +11,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'preservim/tagbar'
@@ -64,9 +64,12 @@ au BufReadPre *.pdf set ro
 au BufReadPost *.pdf %!pdftotext "%" -
 
 " Color Scheme
-let g:solarized_italic=0
+let g:solarized_italics=0
+let g:solarized_old_cursor_style=1
+let g:solarized_termtrans=1
+let g:solarized_use16=1
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 " Plugins config
 let g:nerdtree_tabs_open_on_gui_startup = 0
