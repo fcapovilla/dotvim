@@ -50,6 +50,9 @@ au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
+au BufNewFile,BufRead *.ex,*.exs set filetype=elixir
+au BufNewFile,BufRead *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufNewFile,BufRead mix.lock set filetype=elixir
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 filetype plugin indent on
 
