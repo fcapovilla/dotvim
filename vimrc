@@ -16,7 +16,7 @@ Plug 'godlygeek/tabular'
 Plug 'preservim/tagbar'
 Plug 'gko/vim-coloresque'
 Plug 'junegunn/vim-easy-align'
-Plug 'elixir-editors/vim-elixir'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'tpope/vim-surround'
@@ -50,9 +50,6 @@ au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
-au BufNewFile,BufRead *.ex,*.exs set filetype=elixir
-au BufNewFile,BufRead *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
-au BufNewFile,BufRead mix.lock set filetype=elixir
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 filetype plugin indent on
 
