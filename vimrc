@@ -92,6 +92,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 " Basic config
 set nocompatible
 set modelines=0
+set colorcolumn=120
 
 " Code completion config
 set complete-=i
