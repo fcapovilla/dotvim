@@ -73,13 +73,11 @@ colorscheme solarized8
 
 " Plugins config
 let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:ctrlp_map = '<f6>'
-let g:ctrlp_persistent_input = 0
 let g:ctrlp_by_filename = 1
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_use_caching = 1
-let g:ctrlp_max_files = 0
-let g:ctrlp_dotfiles = 1
+let g:ctrlp_max_files = 100000
+let g:ctrlp_show_hidden = 1
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 elseif has("win32")
@@ -166,7 +164,9 @@ map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
 imap <F5> <esc>:NERDTreeTabsToggle<cr>
 
-" F6 used by CTRL-P
+map <F6> :CtrlP<cr>
+vmap <F6> <esc>:CtrlP<cr>
+imap <F6> <esc>:CtrlP<cr>
 
 map <F7> :bprevious<cr>
 vmap <F7> <esc>:bprevious<cr>
