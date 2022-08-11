@@ -73,6 +73,7 @@ set background=dark
 colorscheme solarized8
 
 " Plugins config
+let g:ale_disable_lsp = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'ra'
