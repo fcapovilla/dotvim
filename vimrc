@@ -32,6 +32,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'mattn/emmet-vim'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'dense-analysis/ale'
+Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
