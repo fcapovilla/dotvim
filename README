@@ -17,6 +17,8 @@ Install CoC dependencies with asdf
     asdf global nodejs 14.16.0
     npm install --global yarn
 
+For copy-paste support in Wayland, install `wl-clipboard`.
+
 Open Vim and Install plugins
 
     :PlugInstall
