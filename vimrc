@@ -75,8 +75,8 @@ colorscheme solarized8
 " Plugins config
 let g:ale_disable_lsp = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:ctrlp_by_filename = 1
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
+let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
 let g:ctrlp_show_hidden = 1
@@ -170,9 +170,9 @@ map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
 imap <F5> <esc>:NERDTreeTabsToggle<cr>
 
-map <F6> <esc>:CtrlPMRUFiles<cr>
-vmap <F6> <esc>:CtrlPMRUFiles<cr>
-imap <F6> <esc>:CtrlPMRUFiles<cr>
+map <F6> <esc>:CtrlP<cr>
+vmap <F6> <esc>:CtrlP<cr>
+imap <F6> <esc>:CtrlP<cr>
 
 map <F7> :CocList<cr>
 vmap <F7> <esc>:CocList<cr>
@@ -221,9 +221,9 @@ if filereadable(glob("~/.vim/vimrc.local"))
 endif
 
 if executable('ag')
-    set grepprg=ag\ --vimgrep\ $*
+    set grepprg=ag\ --vimgrep\ --follow\ $*
     set grepformat^=%f:%l:%c:%m
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --follow -g ""'
 endif
 
 
