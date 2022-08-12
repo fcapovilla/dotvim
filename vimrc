@@ -11,7 +11,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'lifepillar/vim-solarized8'
-Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'preservim/tagbar'
 Plug 'gko/vim-coloresque'
@@ -80,6 +79,8 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_mruf_relative = 1
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 elseif has("win32")
@@ -166,25 +167,25 @@ map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
 imap <F5> <esc>:NERDTreeTabsToggle<cr>
 
-map <F6> :CtrlP<cr>
-vmap <F6> <esc>:CtrlP<cr>
-imap <F6> <esc>:CtrlP<cr>
+map <F6> <esc>:CtrlPMRUFiles<cr>
+vmap <F6> <esc>:CtrlPMRUFiles<cr>
+imap <F6> <esc>:CtrlPMRUFiles<cr>
 
-map <F7> :bprevious<cr>
-vmap <F7> <esc>:bprevious<cr>
-imap <F7> <esc>:bprevious<cr>
+map <F7> :CocList<cr>
+vmap <F7> <esc>:CocList<cr>
+imap <F7> <esc>:CocList<cr>
 
-map <F8> :bnext<cr>
-vmap <F8> <esc>:bnext<cr>
-imap <F8> <esc>:bnext<cr>
+map <F8> :CocCommand<cr>
+vmap <F8> <esc>:CocCommand<cr>
+imap <F8> <esc>:CocCommand<cr>
 
 map <S-F5> :UndotreeToggle<cr>
 vmap <S-F5> <esc>:UndotreeToggle<cr>
 imap <S-F5> <esc>:UndotreeToggle<cr>
 
-map <S-F6> :CocSearch 
-vmap <S-F6> <esc>:CocSearch 
-imap <S-F6> <esc>:CocSearch 
+map <S-F6> :ALEToggle<cr>
+vmap <S-F6> <esc>:ALEToggle<cr>
+imap <S-F6> <esc>:ALEToggle<cr>
 
 map <S-F7> :SignifyToggle<cr>
 vmap <S-F7> <esc>:SignifyToggle<cr>
