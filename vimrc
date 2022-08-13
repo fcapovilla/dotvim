@@ -33,6 +33,7 @@ Plug 'mattn/emmet-vim'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'mhinz/vim-grepper'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
@@ -73,6 +74,9 @@ set background=dark
 colorscheme solarized8
 
 " Plugins config
+runtime plugin/grepper.vim
+let g:grepper.tools = ['ag', 'rg', 'grep']
+let g:grepper.ag.grepprg .= ' --follow'
 let g:ale_disable_lsp = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:ctrlp_cmd = 'CtrlPMRUFiles'
@@ -165,6 +169,7 @@ inoremap jj <esc>
 nnoremap <Space> za
 
 map <C-f> :NERDTreeFind<cr>
+map <C-g> :Grepper<cr>
 
 map <F5> :NERDTreeTabsToggle<cr>
 vmap <F5> <esc>:NERDTreeTabsToggle<cr>
