@@ -77,6 +77,7 @@ colorscheme solarized8
 runtime plugin/grepper.vim
 let g:grepper.tools = ['ag', 'rg', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
+let g:grepper.rg.grepprg .= ' --follow'
 let g:ale_disable_lsp = 1
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:ctrlp_cmd = 'CtrlPMRUFiles'
