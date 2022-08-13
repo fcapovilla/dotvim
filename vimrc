@@ -7,7 +7,6 @@ Plug 'vim-scripts/LargeFile'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'lifepillar/vim-solarized8'
@@ -52,7 +51,7 @@ au BufNewFile,BufRead *.textile set ft=textile
 au BufNewFile,BufRead *.tt set ft=tt2html.html.javascript
 au BufNewFile,BufRead *.html set ft=html.javascript
 au BufNewFile,BufRead *.htm set ft=html.javascript
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
 filetype plugin indent on
 
 " Read odt, sxw, doc and pdf files in vim
@@ -79,7 +78,6 @@ let g:grepper.tools = ['ag', 'rg', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow'
 let g:ale_disable_lsp = 1
-let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:ctrlp_cmd = 'CtrlPMRUFiles'
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
@@ -94,7 +92,6 @@ elseif has("win32")
 endif
 
 vmap <Enter> <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
 
 " Basic config
 set nocompatible
@@ -126,14 +123,10 @@ elseif has("win32")
     set directory=$HOME/vimfiles/tmp/swp
 endif
 
-
 " Statusline
 set laststatus=2
 
 " Editor config
-"set cursorline
-"set visualbell
-"set relativenumber
 set number
 syntax on
 set showcmd
@@ -142,7 +135,7 @@ if !has('nvim')
     set ttymouse=xterm2
 endif
 set tabpagemax=50
-set scrolloff=5
+set scrolloff=0
 set listchars=tab:▸\ ,eol:¬
 
 " Indentation
@@ -154,8 +147,6 @@ set smartindent
 set expandtab
 
 " Search
-"nnoremap / /\v
-"vnoremap / /\v
 set hlsearch
 set incsearch
 set showmatch
@@ -172,9 +163,9 @@ nnoremap <Space> za
 map <C-f> :NERDTreeFind<cr>
 map <C-g> :Grepper<cr>
 
-map <F5> :NERDTreeTabsToggle<cr>
-vmap <F5> <esc>:NERDTreeTabsToggle<cr>
-imap <F5> <esc>:NERDTreeTabsToggle<cr>
+map <F5> :NERDTreeToggle<cr>
+vmap <F5> <esc>:NERDTreeToggle<cr>
+imap <F5> <esc>:NERDTreeToggle<cr>
 
 map <F6> <esc>:CtrlP<cr>
 vmap <F6> <esc>:CtrlP<cr>
@@ -203,24 +194,6 @@ imap <S-F7> <esc>:SignifyToggle<cr>
 map <S-F8> :TagbarToggle<cr>
 vmap <S-F8> <esc>:TagbarToggle<cr>
 imap <S-F8> <esc>:TagbarToggle<cr>
-
-" Disable arrows
-"inoremap  <up>     <nop>
-"inoremap  <down>   <nop>
-"inoremap  <left>   <nop>
-"inoremap  <right>  <nop>
-"noremap   <up>     <nop>
-"noremap   <down>   <nop>
-"noremap   <left>   <nop>
-"noremap   <right>  <nop>
-
-" Text bubbling
-"map <up> ddkp
-"map <down> ddp
-"imap <up> <esc>ddkpi
-"imap <Down> <esc>ddpi
-"vmap <up> dkp`[v`]
-"vmap <Down> dp`[V`]
 
 if filereadable(glob("~/.vim/vimrc.local"))
     so ~/.vim/vimrc.local
