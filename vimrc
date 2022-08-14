@@ -175,13 +175,13 @@ map <F6> <esc>:CtrlP<cr>
 vmap <F6> <esc>:CtrlP<cr>
 imap <F6> <esc>:CtrlP<cr>
 
-map <F7> :CocList<cr>
-vmap <F7> <esc>:CocList<cr>
-imap <F7> <esc>:CocList<cr>
+map <F7> :Grepper<cr>
+vmap <F7> <esc>:Grepper<cr>
+imap <F7> <esc>:Grepper<cr>
 
-map <F8> :CocOutline<cr>
-vmap <F8> <esc>:CocOutline<cr>
-imap <F8> <esc>:CocOutline<cr>
+map <F8> :CocList<cr>
+vmap <F8> <esc>:CocList<cr>
+imap <F8> <esc>:CocList<cr>
 
 map <S-F5> :UndotreeToggle<cr>
 vmap <S-F5> <esc>:UndotreeToggle<cr>
