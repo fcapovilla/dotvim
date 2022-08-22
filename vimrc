@@ -34,20 +34,23 @@ Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'mhinz/vim-grepper'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'yaegassy/coc-html-css-support', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
-Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
-Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
-Plug 'josa42/coc-sh', {'do': 'yarn install --frozen-lockfile'}
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install --frozen-lockfile && yarn prepack'}
 call plug#end()
+
+let g:coc_global_extensions = [
+\ 'coc-css',
+\ 'coc-html',
+\ 'coc-html-css-support',
+\ 'coc-yaml',
+\ 'coc-json',
+\ 'coc-tsserver',
+\ '@yaegassy/coc-volar',
+\ 'coc-solargraph',
+\ 'coc-phpls',
+\ 'coc-blade',
+\ 'coc-sh',
+\ 'coc-jedi',
+\ 'coc-elixir',
+\]
 
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.twig set ft=htmljinja
@@ -108,7 +111,11 @@ set complete-=i
 " Persistent undo
 if has("persistent_undo")
     if has("unix")
-        set undodir=~/.vim/tmp/undo
+        if has('nvim')
+            set undodir=~/.vim/tmp/nvim_undo
+        else
+            set undodir=~/.vim/tmp/undo
+        endif
     elseif has("win32")
         set undodir=$HOME/vimfiles/tmp/undo
     endif
