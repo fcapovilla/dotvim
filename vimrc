@@ -33,6 +33,7 @@ Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'mhinz/vim-grepper'
+Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -237,9 +238,12 @@ set signcolumn=yes
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+let g:coc_snippet_next = '<tab>'
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
