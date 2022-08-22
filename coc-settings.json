@@ -1,3 +1,5 @@
 {
+    "suggest.autoTrigger": "always",
+    "suggest.minTriggerInputLength": 3,
     "jedi.workspace.extraPaths": ["odoo"],
 }
