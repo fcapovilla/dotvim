@@ -174,9 +174,6 @@ set tags=tags;~
 inoremap jj <esc>
 nnoremap <Space> za
 
-map <leader>gf :NERDTreeFind<cr>
-map <leader>gg :Grepper<cr>
-
 map <F5> :NERDTreeToggle<cr>
 vmap <F5> <esc>:NERDTreeToggle<cr>
 imap <F5> <esc>:NERDTreeToggle<cr>
@@ -193,17 +190,17 @@ map <F8> :CocList<cr>
 vmap <F8> <esc>:CocList<cr>
 imap <F8> <esc>:CocList<cr>
 
-map <S-F5> :UndotreeToggle<cr>
-vmap <S-F5> <esc>:UndotreeToggle<cr>
-imap <S-F5> <esc>:UndotreeToggle<cr>
+map <S-F5> :NERDTreeFind<cr>
+vmap <S-F5> <esc>:NERDTreeFind<cr>
+imap <S-F5> <esc>:NERDTreeFind<cr>
 
-map <S-F6> :ALEToggle<cr>
-vmap <S-F6> <esc>:ALEToggle<cr>
-imap <S-F6> <esc>:ALEToggle<cr>
+map <S-F6> :UndotreeToggle<cr>
+vmap <S-F6> <esc>:UndotreeToggle<cr>
+imap <S-F6> <esc>:UndotreeToggle<cr>
 
-map <S-F7> :SignifyToggle<cr>
-vmap <S-F7> <esc>:SignifyToggle<cr>
-imap <S-F7> <esc>:SignifyToggle<cr>
+map <S-F7> :ALEToggle<cr>
+vmap <S-F7> <esc>:ALEToggle<cr>
+imap <S-F7> <esc>:ALEToggle<cr>
 
 map <S-F8> :TagbarToggle<cr>
 vmap <S-F8> <esc>:TagbarToggle<cr>
