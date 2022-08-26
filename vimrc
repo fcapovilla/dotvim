@@ -86,7 +86,7 @@ runtime plugin/grepper.vim
 let g:grepper.tools = ['ag', 'rg', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow'
-let g:grepper.prompt_quote = 3
+let g:grepper.prompt_quote = 2
 let g:ale_disable_lsp = 1
 let g:ctrlp_cmd = 'CtrlPMRUFiles'
 let g:ctrlp_working_path_mode = 'rwa'
