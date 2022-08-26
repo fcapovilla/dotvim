@@ -216,7 +216,7 @@ endif
 if executable('ag')
     set grepprg=ag\ --vimgrep\ --follow\ $*
     set grepformat^=%f:%l:%c:%m
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --follow -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
 endif
 
 
