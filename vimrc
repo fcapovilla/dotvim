@@ -174,6 +174,9 @@ set tags=tags;~
 inoremap jj <esc>
 nnoremap <Space> za
 
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+
 map <F5> :NERDTreeToggle<cr>
 vmap <F5> <esc>:NERDTreeToggle<cr>
 imap <F5> <esc>:NERDTreeToggle<cr>
