@@ -34,6 +34,7 @@ Plug 'dense-analysis/ale'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'mhinz/vim-grepper'
 Plug 'honza/vim-snippets'
+Plug 'wincent/terminus'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
