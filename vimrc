@@ -35,6 +35,8 @@ Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'mhinz/vim-grepper'
 Plug 'honza/vim-snippets'
 Plug 'wincent/terminus'
+Plug 'ryanoasis/vim-devicons'
+Plug 'adelarsq/vim-emoji-icon-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -108,6 +110,7 @@ vmap <Enter> <Plug>(EasyAlign)
 set nocompatible
 set modelines=0
 set colorcolumn=120
+set encoding=UTF-8
 
 " Code completion config
 set complete-=i
