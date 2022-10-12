@@ -89,7 +89,6 @@ let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow'
 let g:grepper.prompt_quote = 2
 let g:ale_disable_lsp = 1
-let g:ctrlp_cmd = 'CtrlPMRUFiles'
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
@@ -183,9 +182,9 @@ map <F5> :NERDTreeToggle<cr>
 vmap <F5> <esc>:NERDTreeToggle<cr>
 imap <F5> <esc>:NERDTreeToggle<cr>
 
-map <F6> <esc>:CtrlP<cr>
-vmap <F6> <esc>:CtrlP<cr>
-imap <F6> <esc>:CtrlP<cr>
+map <F6> <esc>:CtrlPMRUFiles<cr>
+vmap <F6> <esc>:CtrlPMRUFiles<cr>
+imap <F6> <esc>:CtrlPMRUFiles<cr>
 
 map <F7> :Grepper<cr>
 vmap <F7> <esc>:Grepper<cr>
