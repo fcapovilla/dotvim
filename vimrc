@@ -96,6 +96,7 @@ let g:ctrlp_max_files = 100000
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_mruf_relative = 1
+let g:NERDTreeMinimalMenu=1
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 elseif has("win32")
