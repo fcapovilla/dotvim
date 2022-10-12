@@ -178,9 +178,19 @@ nnoremap <Space> za
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
-map <F5> :NERDTreeToggle<cr>
-vmap <F5> <esc>:NERDTreeToggle<cr>
-imap <F5> <esc>:NERDTreeToggle<cr>
+function! NERDTreeToggleFind()
+    if filereadable(expand('%'))
+        NERDTreeFind
+    elseif exists("g:NERDTree") && g:NERDTree.IsOpen()
+        NERDTreeClose
+    else
+        NERDTree
+    endif
+endfunction
+
+map <F5> :call NERDTreeToggleFind()<cr>
+vmap <F5> <esc>:call NERDTreeToggleFind()<cr>
+imap <F5> <esc>:call NERDTreeToggleFind()<cr>
 
 map <F6> <esc>:CtrlPMRUFiles<cr>
 vmap <F6> <esc>:CtrlPMRUFiles<cr>
@@ -194,13 +204,13 @@ map <F8> :CocList<cr>
 vmap <F8> <esc>:CocList<cr>
 imap <F8> <esc>:CocList<cr>
 
-map <S-F5> :NERDTreeFind<cr>
-vmap <S-F5> <esc>:NERDTreeFind<cr>
-imap <S-F5> <esc>:NERDTreeFind<cr>
+map <S-F5> :UndotreeToggle<cr>
+vmap <S-F5> <esc>:UndotreeToggle<cr>
+imap <S-F5> <esc>:UndotreeToggle<cr>
 
-map <S-F6> :UndotreeToggle<cr>
-vmap <S-F6> <esc>:UndotreeToggle<cr>
-imap <S-F6> <esc>:UndotreeToggle<cr>
+map <S-F6> :CtrlP<cr>
+vmap <S-F6> <esc>:CtrlP<cr>
+imap <S-F6> <esc>:CtrlP<cr>
 
 map <S-F7> :ALEToggle<cr>
 vmap <S-F7> <esc>:ALEToggle<cr>
