@@ -178,10 +178,11 @@ nnoremap <Space> za
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
-nmap <silent> <A-Up> <C-W><Up>
-nmap <silent> <A-Down> <C-W><Down>
-nmap <silent> <A-Left> <C-W><Left>
-nmap <silent> <A-Right> <C-W><Right>
+map <A-q> :q<cr>
+map <A-Up> <C-W><Up>
+map <A-Down> <C-W><Down>
+map <A-Left> <C-W><Left>
+map <A-Right> <C-W><Right>
 
 function! NERDTreeToggleFind()
     if filereadable(expand('%'))
