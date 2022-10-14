@@ -178,11 +178,10 @@ nnoremap <Space> za
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
-map <A-q> :q<cr>
-map <A-Up> <C-W><Up>
-map <A-Down> <C-W><Down>
-map <A-Left> <C-W><Left>
-map <A-Right> <C-W><Right>
+nmap <A-Up> <C-W><Up>
+nmap <A-Down> <C-W><Down>
+nmap <A-Left> <C-W><Left>
+nmap <A-Right> <C-W><Right>
 
 function! NERDTreeToggleFind()
     if filereadable(expand('%'))
@@ -198,7 +197,7 @@ map <F5> :call NERDTreeToggleFind()<cr>
 vmap <F5> <esc>:call NERDTreeToggleFind()<cr>
 imap <F5> <esc>:call NERDTreeToggleFind()<cr>
 
-map <F6> <esc>:CtrlPMRUFiles<cr>
+map <F6> :CtrlPMRUFiles<cr>
 vmap <F6> <esc>:CtrlPMRUFiles<cr>
 imap <F6> <esc>:CtrlPMRUFiles<cr>
 
