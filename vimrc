@@ -193,36 +193,28 @@ function! NERDTreeToggleFind()
     endif
 endfunction
 
-map <F5> :call NERDTreeToggleFind()<cr>
-vmap <F5> <esc>:call NERDTreeToggleFind()<cr>
+map <F5> <esc>:call NERDTreeToggleFind()<cr>
 imap <F5> <esc>:call NERDTreeToggleFind()<cr>
 
-map <F6> :CtrlPMRUFiles<cr>
-vmap <F6> <esc>:CtrlPMRUFiles<cr>
+map <F6> <esc>:CtrlPMRUFiles<cr>
 imap <F6> <esc>:CtrlPMRUFiles<cr>
 
-map <F7> :Grepper<cr>
-vmap <F7> <esc>:Grepper<cr>
+map <F7> <esc>:Grepper<cr>
 imap <F7> <esc>:Grepper<cr>
 
-map <F8> :CocList<cr>
-vmap <F8> <esc>:CocList<cr>
+map <F8> <esc>:CocList<cr>
 imap <F8> <esc>:CocList<cr>
 
-map <S-F5> :UndotreeToggle<cr>
-vmap <S-F5> <esc>:UndotreeToggle<cr>
+map <S-F5> <esc>:UndotreeToggle<cr>
 imap <S-F5> <esc>:UndotreeToggle<cr>
 
-map <S-F6> :CtrlP<cr>
-vmap <S-F6> <esc>:CtrlP<cr>
+map <S-F6> <esc>:CtrlP<cr>
 imap <S-F6> <esc>:CtrlP<cr>
 
-map <S-F7> :ALEToggle<cr>
-vmap <S-F7> <esc>:ALEToggle<cr>
+map <S-F7> <esc>:ALEToggle<cr>
 imap <S-F7> <esc>:ALEToggle<cr>
 
-map <S-F8> :TagbarToggle<cr>
-vmap <S-F8> <esc>:TagbarToggle<cr>
+map <S-F8> <esc>:TagbarToggle<cr>
 imap <S-F8> <esc>:TagbarToggle<cr>
 
 if filereadable(glob("~/.vim/vimrc.local"))
