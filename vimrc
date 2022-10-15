@@ -91,10 +91,10 @@ xnoremap gs <plug>(GrepperOperator)
 
 inoremap jj <esc>
 
-nnoremap <A-Up>    <C-W><Up>
-nnoremap <A-Down>  <C-W><Down>
-nnoremap <A-Left>  <C-W><Left>
-nnoremap <A-Right> <C-W><Right>
+nnoremap <C-h> <C-w><Left>
+nnoremap <C-j> <C-w><Down>
+nnoremap <C-k> <C-w><Up>
+nnoremap <C-l> <C-w><Right>
 
 function! NERDTreeToggleFind()
     if filereadable(expand('%'))
