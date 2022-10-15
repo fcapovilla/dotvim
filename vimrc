@@ -91,9 +91,9 @@ xnoremap gs <plug>(GrepperOperator)
 
 inoremap jj <esc>
 
-nnoremap <A-Up> <C-W><Up>
-nnoremap <A-Down> <C-W><Down>
-nnoremap <A-Left> <C-W><Left>
+nnoremap <A-Up>    <C-W><Up>
+nnoremap <A-Down>  <C-W><Down>
+nnoremap <A-Left>  <C-W><Left>
 nnoremap <A-Right> <C-W><Right>
 
 function! NERDTreeToggleFind()
@@ -106,29 +106,35 @@ function! NERDTreeToggleFind()
     endif
 endfunction
 
-noremap <F5> <esc>:call NERDTreeToggleFind()<cr>
-inoremap <F5> <esc>:call NERDTreeToggleFind()<cr>
-
-noremap <S-F5> <esc>:UndotreeToggle<cr>
+noremap  <F5>   <esc>:call NERDTreeToggleFind()<cr>
+inoremap <F5>   <esc>:call NERDTreeToggleFind()<cr>
+noremap  <S-F5> <esc>:UndotreeToggle<cr>
 inoremap <S-F5> <esc>:UndotreeToggle<cr>
-
-noremap <F6> <esc>:CtrlPMRUFiles<cr>
-inoremap <F6> <esc>:CtrlPMRUFiles<cr>
-
-noremap <S-F6> <esc>:CtrlP<cr>
+noremap  <F6>   <esc>:CtrlPMRUFiles<cr>
+inoremap <F6>   <esc>:CtrlPMRUFiles<cr>
+noremap  <S-F6> <esc>:CtrlP<cr>
 inoremap <S-F6> <esc>:CtrlP<cr>
-
-noremap <F7> <esc>:Grepper<cr>
-inoremap <F7> <esc>:Grepper<cr>
-
-noremap <S-F7> <esc>:ALEToggle<cr>
+noremap  <F7>   <esc>:Grepper<cr>
+inoremap <F7>   <esc>:Grepper<cr>
+noremap  <S-F7> <esc>:ALEToggle<cr>
 inoremap <S-F7> <esc>:ALEToggle<cr>
-
-noremap <F8> <esc>:CocList<cr>
-inoremap <F8> <esc>:CocList<cr>
-
-noremap <S-F8> <esc>:CocOutline<cr>
+noremap  <F8>   <esc>:CocList<cr>
+inoremap <F8>   <esc>:CocList<cr>
+noremap  <S-F8> <esc>:CocOutline<cr>
 inoremap <S-F8> <esc>:CocOutline<cr>
+
+nmap <F2>          <Plug>VimspectorContinue
+nmap <leader><F2>  <Plug>VimspectorLaunch
+nmap <F3>          <Plug>VimspectorPause
+nmap <leader><F3>  <Plug>VimspectorStop
+nmap <F4>          <Plug>VimspectorRestart
+nmap <F9>          <Plug>VimspectorStepOver
+nmap <S-F9>        <Plug>VimspectorRunToCursor
+nmap <F10>         <Plug>VimspectorStepInto
+nmap <S-F10>       <Plug>VimspectorStepOut
+nmap <F12>         <Plug>VimspectorToggleBreakpoint
+nmap <S-F12>       <Plug>VimspectorAddFunctionBreakpoint
+nmap <leader><F12> <Plug>VimspectorToggleConditionalBreakpoint
 
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.twig set ft=htmljinja
