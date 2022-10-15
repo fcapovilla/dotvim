@@ -1,41 +1,42 @@
 call plug#begin('~/.vim/plugged')
-Plug 'bitc/vim-bad-whitespace'
+" Tools
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'mbbill/undotree'
-Plug 'vim-scripts/LargeFile'
-Plug 'preservim/nerdcommenter'
+Plug 'mhinz/vim-grepper'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-airline/vim-airline'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'godlygeek/tabular'
-Plug 'preservim/tagbar'
-Plug 'gko/vim-coloresque'
-Plug 'junegunn/vim-easy-align'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
+Plug 'mhinz/vim-signify'
+Plug 'mbbill/undotree'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
+Plug 'puremourning/vimspector'
+" Mappings
+Plug 'preservim/nerdcommenter'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
 Plug 'tommcdo/vim-exchange'
-Plug 'mhinz/vim-signify'
 Plug 'mg979/vim-visual-multi'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'mattn/emmet-vim'
 Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'dense-analysis/ale'
-Plug 'jasonccox/vim-wayland-clipboard'
-Plug 'mhinz/vim-grepper'
-Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim'
+" UI
+Plug 'lifepillar/vim-solarized8'
+Plug 'vim-airline/vim-airline'
+Plug 'bitc/vim-bad-whitespace'
+Plug 'gko/vim-coloresque'
 Plug 'wincent/terminus'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Other
+Plug 'sheerun/vim-polyglot'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/LargeFile'
+Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -54,6 +55,80 @@ let g:coc_global_extensions = [
 \ 'coc-elixir',
 \ 'coc-snippets',
 \]
+
+" Basic configuration
+set encoding=utf-8
+set nocompatible
+set modelines=0
+set colorcolumn=120
+set complete-=i
+set lazyredraw
+set laststatus=2
+set number
+set scrolloff=0
+set listchars=tab:▸\ ,eol:¬
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set smartindent
+set expandtab
+set hlsearch
+set incsearch
+set showmatch
+set ignorecase
+set smartcase
+syntax on
+if !has('nvim')
+    set ttymouse=xterm2
+endif
+
+" Button mappings
+vnoremap <Enter> <Plug>(EasyAlign)
+
+nnoremap gs <plug>(GrepperOperator)
+xnoremap gs <plug>(GrepperOperator)
+
+inoremap jj <esc>
+
+nnoremap <A-Up> <C-W><Up>
+nnoremap <A-Down> <C-W><Down>
+nnoremap <A-Left> <C-W><Left>
+nnoremap <A-Right> <C-W><Right>
+
+function! NERDTreeToggleFind()
+    if filereadable(expand('%'))
+        NERDTreeFind
+    elseif exists("g:NERDTree") && g:NERDTree.IsOpen()
+        NERDTreeClose
+    else
+        NERDTree
+    endif
+endfunction
+
+noremap <F5> <esc>:call NERDTreeToggleFind()<cr>
+inoremap <F5> <esc>:call NERDTreeToggleFind()<cr>
+
+noremap <S-F5> <esc>:UndotreeToggle<cr>
+inoremap <S-F5> <esc>:UndotreeToggle<cr>
+
+noremap <F6> <esc>:CtrlPMRUFiles<cr>
+inoremap <F6> <esc>:CtrlPMRUFiles<cr>
+
+noremap <S-F6> <esc>:CtrlP<cr>
+inoremap <S-F6> <esc>:CtrlP<cr>
+
+noremap <F7> <esc>:Grepper<cr>
+inoremap <F7> <esc>:Grepper<cr>
+
+noremap <S-F7> <esc>:ALEToggle<cr>
+inoremap <S-F7> <esc>:ALEToggle<cr>
+
+noremap <F8> <esc>:CocList<cr>
+inoremap <F8> <esc>:CocList<cr>
+
+noremap <S-F8> <esc>:CocOutline<cr>
+inoremap <S-F8> <esc>:CocOutline<cr>
 
 " Filetypes (for snippets)
 au BufNewFile,BufRead *.twig set ft=htmljinja
@@ -82,35 +157,32 @@ let g:solarized_use16=1
 set background=dark
 colorscheme solarized8
 
-" Plugins config
+" Plugin configuration
 runtime plugin/grepper.vim
 let g:grepper.tools = ['ag', 'rg', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow'
 let g:grepper.prompt_quote = 2
+
+let g:coc_snippet_next = '<tab>'
+
 let g:ale_disable_lsp = 1
+
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_mruf_relative = 1
+
 let g:NERDTreeMinimalMenu=1
+let g:NERDTreeShowHidden=1
+
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
-
-vmap <Enter> <Plug>(EasyAlign)
-
-" Basic config
-set nocompatible
-set modelines=0
-set colorcolumn=120
-
-" Code completion config
-set complete-=i
 
 " Persistent undo
 if has("persistent_undo")
@@ -138,95 +210,17 @@ elseif has("win32")
     set directory=$HOME/vimfiles/tmp/swp
 endif
 
-" Statusline
-set laststatus=2
-
-" Editor config
-set number
-syntax on
-set showcmd
-set mouse=a
-if !has('nvim')
-    set ttymouse=xterm2
-endif
-set tabpagemax=50
-set scrolloff=0
-set listchars=tab:▸\ ,eol:¬
-
-" Indentation
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set autoindent
-set smartindent
-set expandtab
-
-" Search
-set hlsearch
-set incsearch
-set showmatch
-set ignorecase
-set smartcase
-
-" Where to find the tags file
-set tags=tags;~
-
-" Button mapping
-inoremap jj <esc>
-nnoremap <Space> za
-
-nmap gs <plug>(GrepperOperator)
-xmap gs <plug>(GrepperOperator)
-
-nmap <A-Up> <C-W><Up>
-nmap <A-Down> <C-W><Down>
-nmap <A-Left> <C-W><Left>
-nmap <A-Right> <C-W><Right>
-
-function! NERDTreeToggleFind()
-    if filereadable(expand('%'))
-        NERDTreeFind
-    elseif exists("g:NERDTree") && g:NERDTree.IsOpen()
-        NERDTreeClose
-    else
-        NERDTree
-    endif
-endfunction
-
-map <F5> <esc>:call NERDTreeToggleFind()<cr>
-imap <F5> <esc>:call NERDTreeToggleFind()<cr>
-
-map <F6> <esc>:CtrlPMRUFiles<cr>
-imap <F6> <esc>:CtrlPMRUFiles<cr>
-
-map <F7> <esc>:Grepper<cr>
-imap <F7> <esc>:Grepper<cr>
-
-map <F8> <esc>:CocList<cr>
-imap <F8> <esc>:CocList<cr>
-
-map <S-F5> <esc>:UndotreeToggle<cr>
-imap <S-F5> <esc>:UndotreeToggle<cr>
-
-map <S-F6> <esc>:CtrlP<cr>
-imap <S-F6> <esc>:CtrlP<cr>
-
-map <S-F7> <esc>:ALEToggle<cr>
-imap <S-F7> <esc>:ALEToggle<cr>
-
-map <S-F8> <esc>:TagbarToggle<cr>
-imap <S-F8> <esc>:TagbarToggle<cr>
-
-if filereadable(glob("~/.vim/vimrc.local"))
-    so ~/.vim/vimrc.local
-endif
-
+" If available, use Ag for searches
 if executable('ag')
     set grepprg=ag\ --vimgrep\ --follow\ $*
     set grepformat^=%f:%l:%c:%m
     let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
 endif
 
+" Local configuration file
+if filereadable(glob("~/.vim/vimrc.local"))
+    so ~/.vim/vimrc.local
+endif
 
 " === CoC Configuration ===
 
@@ -243,16 +237,15 @@ set updatetime=300
 set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-let g:coc_snippet_next = '<tab>'
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
