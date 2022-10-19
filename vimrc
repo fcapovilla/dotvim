@@ -165,7 +165,7 @@ colorscheme solarized8
 
 " Plugin configuration
 runtime plugin/grepper.vim
-let g:grepper.tools = ['ag', 'rg', 'grep']
+let g:grepper.tools = ['rg', 'ag', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow'
 let g:grepper.prompt_quote = 2
@@ -216,11 +216,11 @@ elseif has("win32")
     set directory=$HOME/vimfiles/tmp/swp
 endif
 
-" If available, use Ag for searches
-if executable('ag')
-    set grepprg=ag\ --vimgrep\ --follow\ $*
+" If available, use Rg for searches
+if executable('rg')
+    set grepprg=rg\ --color=never\ --vimgrep\ --follow\ $*
     set grepformat^=%f:%l:%c:%m
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
+    let g:ctrlp_user_command = 'rg %s --files --color=never --no-ignore-vcs --follow --glob ""'
 endif
 
 " Local configuration file
