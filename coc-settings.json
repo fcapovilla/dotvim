@@ -2,5 +2,7 @@
     "suggest.autoTrigger": "always",
     "suggest.minTriggerInputLength": 3,
     "jedi.workspace.extraPaths": ["odoo"],
-    "jedi.executable.command": "~/.asdf/shims/jedi-language-server"
+    "jedi.executable.command": "~/.asdf/shims/jedi-language-server",
+    "git.enableGutters": false,
+    "git.realtimeGutters": false
 }
