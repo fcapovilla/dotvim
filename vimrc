@@ -94,6 +94,10 @@ inoremap jj <esc>
 nnoremap <Space> <Nop>
 let mapleader=" "
 
+nnoremap <C-h> <C-w><Left>
+nnoremap <C-j> <C-w><Down>
+nnoremap <C-k> <C-w><Up>
+nnoremap <C-l> <C-w><Right>
 nnoremap <leader><Left> <C-w><Left>
 nnoremap <leader><Down> <C-w><Down>
 nnoremap <leader><Up> <C-w><Up>
