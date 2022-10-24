@@ -91,10 +91,15 @@ xnoremap gs <plug>(GrepperOperator)
 
 inoremap jj <esc>
 
-nnoremap <C-h> <C-w><Left>
-nnoremap <C-j> <C-w><Down>
-nnoremap <C-k> <C-w><Up>
-nnoremap <C-l> <C-w><Right>
+nnoremap <Space> <Nop>
+let mapleader=" "
+
+nnoremap <leader><Left> <C-w><Left>
+nnoremap <leader><Down> <C-w><Down>
+nnoremap <leader><Up> <C-w><Up>
+nnoremap <leader><Right> <C-w><Right>
+nnoremap <leader><Space> :CtrlPMRUFiles<cr>
+nnoremap <leader><cr> :on<cr>
 
 function! NERDTreeToggleFind()
     if filereadable(expand('%'))
@@ -165,9 +170,9 @@ colorscheme solarized8
 
 " Plugin configuration
 runtime plugin/grepper.vim
-let g:grepper.tools = ['rg', 'ag', 'grep']
+let g:grepper.tools = ['ag', 'rg', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
-let g:grepper.rg.grepprg .= ' --follow'
+let g:grepper.rg.grepprg .= ' --follow --no-messages'
 let g:grepper.prompt_quote = 2
 
 let g:coc_snippet_next = '<tab>'
@@ -216,12 +221,15 @@ elseif has("win32")
     set directory=$HOME/vimfiles/tmp/swp
 endif
 
-" If available, use Rg for searches
-if executable('rg')
-    set grepprg=rg\ --color=never\ --vimgrep\ --follow\ $*
-    set grepformat^=%f:%l:%c:%m
-    let g:ctrlp_user_command = 'rg %s --files --color=never --no-ignore-vcs --follow --glob ""'
+" If available, use Ag or Rg for searches
+if executable('ag')
+    set grepprg=ag\ --vimgrep\ --follow\ $*
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
+elseif executable('rg')
+    set grepprg=rg\ --color=never\ --vimgrep\ --follow\ --no-messages\ $*
+    let g:ctrlp_user_command = 'rg %s --files --color=never --no-ignore-vcs --follow --no-messages --glob ""'
 endif
+set grepformat^=%f:%l:%c:%m
 
 " Local configuration file
 if filereadable(glob("~/.vim/vimrc.local"))
