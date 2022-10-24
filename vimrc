@@ -40,6 +40,7 @@ Plug 'honza/vim-snippets'
 call plug#end()
 
 let g:coc_global_extensions = [
+\ 'coc-lists',
 \ 'coc-css',
 \ 'coc-html',
 \ 'coc-html-css-support',
