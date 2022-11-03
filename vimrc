@@ -92,8 +92,7 @@ vnoremap <Enter> <Plug>(EasyAlign)
 nnoremap gs <plug>(GrepperOperator)
 xnoremap gs <plug>(GrepperOperator)
 
-autocmd FileType qf nnoremap <silent><nowait><buffer> j <Down><plug>(qf-preview-open)
-autocmd FileType qf nnoremap <silent><nowait><buffer> k <Up><plug>(qf-preview-open)
+autocmd FileType qf nmap <silent><buffer> <leader>p <plug>(qf-preview-open)
 
 inoremap jj <esc>
 
@@ -188,8 +187,8 @@ let g:grepper.highlight = 1
 
 let g:qfpreview = {
 \ 'close': "\<esc>",
-\ 'next': 'j',
-\ 'previous': 'k',
+\ 'next': "\<down>",
+\ 'previous': "\<up>",
 \ 'offset': 4,
 \ 'number': v:true,
 \ 'matchcolumn': v:true,
