@@ -24,6 +24,7 @@ Plug 'tommcdo/vim-exchange'
 Plug 'mg979/vim-visual-multi'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'bfrg/vim-qf-preview'
 Plug 'mattn/emmet-vim'
 " UI
 Plug 'lifepillar/vim-solarized8'
@@ -90,6 +91,9 @@ vnoremap <Enter> <Plug>(EasyAlign)
 
 nnoremap gs <plug>(GrepperOperator)
 xnoremap gs <plug>(GrepperOperator)
+
+autocmd FileType qf nnoremap <silent><nowait><buffer> j <Down><plug>(qf-preview-open)
+autocmd FileType qf nnoremap <silent><nowait><buffer> k <Up><plug>(qf-preview-open)
 
 inoremap jj <esc>
 
@@ -181,6 +185,15 @@ let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow --no-messages'
 let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
+
+let g:qfpreview = {
+\ 'close': "\<esc>",
+\ 'next': 'j',
+\ 'previous': 'k',
+\ 'offset': 4,
+\ 'number': v:true,
+\ 'matchcolumn': v:true,
+\}
 
 let g:coc_snippet_next = '<tab>'
 
