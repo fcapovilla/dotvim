@@ -109,6 +109,7 @@ nnoremap <leader><Up> <C-w><Up>
 nnoremap <leader><Right> <C-w><Right>
 nnoremap <leader><Space> :CtrlPMRUFiles<cr>
 nnoremap <leader><cr> :on<cr>
+map <leader>y "+y
 
 function! NERDTreeToggleFind()
     if filereadable(expand('%'))
