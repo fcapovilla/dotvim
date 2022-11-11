@@ -99,15 +99,14 @@ inoremap jj <esc>
 nnoremap <Space> <Nop>
 let mapleader=" "
 
-nnoremap <C-h> <C-w><Left>
-nnoremap <C-j> <C-w><Down>
-nnoremap <C-k> <C-w><Up>
-nnoremap <C-l> <C-w><Right>
-nnoremap <leader><Left> <C-w><Left>
-nnoremap <leader><Down> <C-w><Down>
-nnoremap <leader><Up> <C-w><Up>
-nnoremap <leader><Right> <C-w><Right>
-nnoremap <leader><cr> :on<cr>
+noremap <C-h> <C-w><Left>
+noremap <C-j> <C-w><Down>
+noremap <C-k> <C-w><Up>
+noremap <C-l> <C-w><Right>
+noremap <C-w><C-Left> <C-w><Left>
+noremap <C-w><C-Down> <C-w><Down>
+noremap <C-w><C-Up> <C-w><Up>
+noremap <C-w><C-Right> <C-w><Right>
 map <leader>y "+y
 
 function! NERDTreeToggleFind()
