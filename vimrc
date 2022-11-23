@@ -54,7 +54,7 @@ let g:coc_global_extensions = [
 \ 'coc-phpls',
 \ 'coc-blade',
 \ 'coc-sh',
-\ 'coc-jedi',
+\ 'coc-pyright',
 \ 'coc-elixir',
 \ 'coc-snippets',
 \]

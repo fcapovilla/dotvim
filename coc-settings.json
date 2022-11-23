@@ -1,8 +1,13 @@
 {
     "suggest.autoTrigger": "always",
     "suggest.minTriggerInputLength": 3,
-    "jedi.workspace.extraPaths": ["odoo"],
-    "jedi.executable.command": "~/.asdf/shims/jedi-language-server",
+    "python.analysis.extraPaths": ["odoo"],
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportOptionalSubscript": "none",
+        "reportGeneralTypeIssues": "none"
+    },
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.functionReturnTypes": false,
     "git.enableGutters": false,
     "git.realtimeGutters": false
 }
