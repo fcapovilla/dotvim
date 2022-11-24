@@ -173,16 +173,19 @@ let g:coc_snippet_next = '<tab>'
 
 let g:ale_disable_lsp = 1
 
+let g:NERDTreeMinimalMenu=1
+let g:NERDTreeShowHidden=1
+
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_mruf_relative = 1
-
-let g:NERDTreeMinimalMenu=1
-let g:NERDTreeShowHidden=1
-
+let g:ctrlp_prompt_mappings = {
+\ 'ToggleType(1)': ['<c-f>', '<c-up>', '<tab>'],
+\ 'PrtExpandDir()': ['<c-tab>'],
+\}
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 elseif has("win32")
