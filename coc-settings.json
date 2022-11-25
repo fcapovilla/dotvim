@@ -9,6 +9,5 @@
     "pyright.inlayHints.variableTypes": false,
     "pyright.inlayHints.functionReturnTypes": false,
     "git.enableGutters": false,
-    "git.realtimeGutters": false,
-    "git.addGBlameToVirtualText": true
+    "git.realtimeGutters": false
 }
