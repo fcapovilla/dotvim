@@ -152,6 +152,7 @@ let g:solarized_termtrans=1
 let g:solarized_use16=1
 set background=dark
 colorscheme solarized8
+hi link CocCodeLens Comment
 
 " Plugin configuration
 runtime plugin/grepper.vim
