@@ -177,6 +177,8 @@ let g:ale_disable_lsp = 1
 let g:NERDTreeMinimalMenu=1
 let g:NERDTreeShowHidden=1
 
+let g:airline_section_c = airline#section#create(['%<', 'path', ' ', 'readonly', 'coc_status', 'lsp_progress', " %{get(b:, 'coc_git_blame', '')}"])
+
 let g:ctrlp_working_path_mode = 'rwa'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_max_files = 100000
