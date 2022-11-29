@@ -32,6 +32,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'bitc/vim-bad-whitespace'
 Plug 'gko/vim-coloresque'
 Plug 'wincent/terminus'
+Plug 'ryanoasis/vim-devicons'
+Plug 'adelarsq/vim-emoji-icon-theme'
 " Other
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
