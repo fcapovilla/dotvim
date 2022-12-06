@@ -36,6 +36,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'adelarsq/vim-emoji-icon-theme'
 " Other
 Plug 'sheerun/vim-polyglot'
+Plug 'elmar-hinz/vim.typoscript'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/LargeFile'
 Plug 'jasonccox/vim-wayland-clipboard'
