@@ -177,6 +177,7 @@ let g:qfpreview = {
 let g:coc_snippet_next = '<tab>'
 
 let g:ale_disable_lsp = 1
+let g:ale_virtualtext_cursor = 0
 
 let g:NERDTreeMinimalMenu=1
 let g:NERDTreeShowHidden=1
