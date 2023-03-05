@@ -164,6 +164,7 @@ let g:grepper.ag.grepprg .= ' --follow'
 let g:grepper.rg.grepprg .= ' --follow --no-messages'
 let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
+let g:grepper.stop = 5000
 
 let g:qfpreview = {
 \ 'close': "\<esc>",
