@@ -60,6 +60,7 @@ let g:coc_global_extensions = [
 \ 'coc-pyright',
 \ 'coc-elixir',
 \ 'coc-snippets',
+\ 'coc-flutter',
 \]
 
 " Basic configuration
