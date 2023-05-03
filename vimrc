@@ -14,6 +14,7 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'
 Plug 'puremourning/vimspector'
+Plug 'madox2/vim-ai'
 " Mappings
 Plug 'preservim/nerdcommenter'
 Plug 'junegunn/vim-easy-align'
@@ -161,7 +162,7 @@ hi link CocCodeLens Comment
 " Plugin configuration
 runtime plugin/grepper.vim
 let g:grepper.tools = ['ag', 'rg', 'grep']
-let g:grepper.ag.grepprg .= ' --follow'
+let g:grepper.ag.grepprg .= ' --follow -W 500'
 let g:grepper.rg.grepprg .= ' --follow --no-messages'
 let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
