@@ -163,7 +163,7 @@ hi link CocCodeLens Comment
 runtime plugin/grepper.vim
 let g:grepper.tools = ['rg', 'ag', 'grep']
 let g:grepper.ag.grepprg .= ' --follow'
-let g:grepper.rg.grepprg .= ' --follow --no-messages -M 1000'
+let g:grepper.rg.grepprg .= ' --follow --no-ignore-vcs --no-messages -M 1000'
 let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
 let g:grepper.stop = 5000
