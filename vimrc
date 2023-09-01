@@ -4,8 +4,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhinz/vim-grepper'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'mhinz/vim-signify'
@@ -34,6 +34,7 @@ Plug 'bitc/vim-bad-whitespace'
 Plug 'gko/vim-coloresque'
 Plug 'wincent/terminus'
 Plug 'ryanoasis/vim-devicons'
+Plug 'lambdalisue/fern-renderer-devicons.vim'
 Plug 'adelarsq/vim-emoji-icon-theme'
 " Other
 Plug 'sheerun/vim-polyglot'
@@ -114,18 +115,16 @@ noremap <C-w><C-Up> <C-w><Up>
 noremap <C-w><C-Right> <C-w><Right>
 map <leader>y "+y
 
-function! NERDTreeToggleFind()
+function! FernToggleFind()
     if filereadable(expand('%'))
-        NERDTreeFind
-    elseif exists("g:NERDTree") && g:NERDTree.IsOpen()
-        NERDTreeClose
+        Fern . -drawer -reveal=%
     else
-        NERDTree
+        Fern . -drawer -toggle
     endif
 endfunction
 
 noremap <leader><Space> <esc>:CtrlPMRUFiles<cr>
-noremap <leader>t <esc>:call NERDTreeToggleFind()<cr>
+noremap <leader>t <esc>:call FernToggleFind()<cr>
 noremap <leader>u <esc>:UndotreeToggle<cr>
 noremap <leader>g <esc>:Grepper<cr>
 noremap <leader>l <esc>:CocList<cr>
@@ -183,9 +182,6 @@ let g:coc_snippet_next = '<tab>'
 let g:ale_disable_lsp = 1
 let g:ale_virtualtext_cursor = 0
 
-let g:NERDTreeMinimalMenu=1
-let g:NERDTreeShowHidden=1
-
 let g:airline_stl_path_style = 'short'
 let g:airline_section_c = airline#section#create(['file', ' ', 'readonly', '%<', 'coc_status', 'lsp_progress', " %{get(b:, 'coc_git_blame', '')}"])
 
@@ -206,6 +202,28 @@ if has("unix")
 elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
 endif
+
+let g:fern#renderer = "devicons"
+let g:fern#default_hidden = 1
+let g:fern#drawer_width = 40
+let g:fern#disable_drawer_hover_popup = 1
+
+function! s:init_fern() abort
+  nmap <buffer><expr>
+      \ <Plug>(fern-my-expand-or-collapse)
+      \ fern#smart#leaf(
+      \   "\<Plug>(fern-action-open)",
+      \   "\<Plug>(fern-action-expand)",
+      \   "\<Plug>(fern-action-collapse)",
+      \ )
+  nmap <buffer><nowait> <cr> <Plug>(fern-my-expand-or-collapse)
+  nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
 
 " Persistent undo
 if has("persistent_undo")
