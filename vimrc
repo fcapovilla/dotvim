@@ -207,6 +207,7 @@ let g:fern#renderer = "devicons"
 let g:fern#default_hidden = 1
 let g:fern#drawer_width = 40
 let g:fern#disable_drawer_hover_popup = 1
+let g:fern#hide_cursor = 1
 
 function! s:init_fern() abort
   nmap <buffer><expr>
