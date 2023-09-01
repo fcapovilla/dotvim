@@ -213,7 +213,7 @@ function! s:init_fern() abort
       \ <Plug>(fern-my-expand-or-collapse)
       \ fern#smart#leaf(
       \   "\<Plug>(fern-action-open)",
-      \   "\<Plug>(fern-action-expand)",
+      \   "\<Plug>(fern-action-expand:stay)",
       \   "\<Plug>(fern-action-collapse)",
       \ )
   nmap <buffer><nowait> <cr> <Plug>(fern-my-expand-or-collapse)
