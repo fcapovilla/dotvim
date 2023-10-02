@@ -41,7 +41,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'elmar-hinz/vim.typoscript'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/LargeFile'
-Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'jasonccox/vim-wayland-clipboard', {'tag': 'v0.1.0'}
 Plug 'honza/vim-snippets'
 call plug#end()
 
