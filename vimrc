@@ -81,7 +81,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
-setl expandtab
+set expandtab
 set hlsearch
 set incsearch
 set showmatch
