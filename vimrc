@@ -212,7 +212,6 @@ let g:fern#renderer = "devicons"
 let g:fern#default_hidden = 1
 let g:fern#drawer_width = 40
 let g:fern#disable_drawer_hover_popup = 1
-let g:fern#hide_cursor = 1
 let g:fern_renderer_devicons_disable_warning = 1
 let g:fern_git_status#disable_ignored = 1
 let g:fern_git_status#disable_untracked = 1
@@ -229,7 +228,7 @@ function! s:init_fern() abort
   nmap <buffer><nowait> <cr> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer> dd <Plug>(fern-action-remove)
-  nmap <buffer> n <Plug>(fern-action-new-path)
+  nmap <buffer> N <Plug>(fern-action-new-path)
 endfunction
 
 augroup fern-custom
