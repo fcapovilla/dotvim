@@ -126,7 +126,7 @@ function! FernToggleFind()
 endfunction
 
 noremap <leader><Space> <esc>:CtrlPMRUFiles<cr>
-noremap <leader>z <esc>:Files<cr>
+noremap <leader>f <esc>:Files<cr>
 noremap <leader>t <esc>:call FernToggleFind()<cr>
 noremap <leader>u <esc>:UndotreeToggle<cr>
 noremap <leader>g <esc>:Grepper<cr>
@@ -348,8 +348,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>F  <Plug>(coc-format-selected)
+nmap <leader>F  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
