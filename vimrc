@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -124,6 +126,7 @@ function! FernToggleFind()
 endfunction
 
 noremap <leader><Space> <esc>:CtrlPMRUFiles<cr>
+noremap <leader>z <esc>:Files<cr>
 noremap <leader>t <esc>:call FernToggleFind()<cr>
 noremap <leader>u <esc>:UndotreeToggle<cr>
 noremap <leader>g <esc>:Grepper<cr>
@@ -199,8 +202,10 @@ let g:ctrlp_prompt_mappings = {
 \}
 if has("unix")
     let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
+    let g:fzf_history_dir = '~/.vim/tmp/fzf-history'
 elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
+    let g:fzf_history_dir = '$HOME/vimfiles/tmp/fzf-history'
 endif
 
 let g:fern#renderer = "devicons"
