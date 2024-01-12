@@ -229,6 +229,8 @@ function! s:init_fern() abort
   nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer> dd <Plug>(fern-action-remove)
   nmap <buffer> N <Plug>(fern-action-new-path)
+  nmap <buffer> v <Plug>(fern-action-open:split)
+  nmap <buffer> V <Plug>(fern-action-open:vsplit)
 endfunction
 
 augroup fern-custom
