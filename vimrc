@@ -230,7 +230,7 @@ function! s:init_fern() abort
   nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:edit-or-split)
   nmap <buffer> d <Plug>(fern-action-remove)
   nmap <buffer> N <Plug>(fern-action-new-path)
-  nmap <buffer> b <Plug>(fern-action-open:split)
+  nmap <buffer> b <Plug>(fern-action-open:below)
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
 endfunction
 
