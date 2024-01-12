@@ -266,12 +266,12 @@ elseif has("win32")
 endif
 
 " If available, use Ag or Rg for searches
-if executable('ag')
-    set grepprg=ag\ --vimgrep\ --follow\ $*
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
-elseif executable('rg')
+if executable('rg')
     set grepprg=rg\ --color=never\ --vimgrep\ --follow\ --no-messages\ $*
     let g:ctrlp_user_command = 'rg %s --files --color=never --no-ignore-vcs --follow --no-messages --glob ""'
+elseif executable('ag')
+    set grepprg=ag\ --vimgrep\ --follow\ $*
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --skip-vcs-ignores --follow -g ""'
 endif
 set grepformat^=%f:%l:%c:%m
 
