@@ -232,6 +232,7 @@ function! s:init_fern() abort
   nmap <buffer> N <Plug>(fern-action-new-path)
   nmap <buffer> b <Plug>(fern-action-open:below)
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
+  nmap <buffer> S <Plug>(fern-action-grep)
 endfunction
 
 augroup fern-custom
