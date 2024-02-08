@@ -228,7 +228,7 @@ function! s:init_fern() abort
   nmap <buffer><nowait> <cr> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer> <2-LeftMouse> <Plug>(fern-my-expand-or-collapse)
   nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:edit-or-split)
-  nmap <buffer> d <Plug>(fern-action-remove)
+  nmap <buffer> dd <Plug>(fern-action-remove)
   nmap <buffer> N <Plug>(fern-action-new-path)
   nmap <buffer> b <Plug>(fern-action-open:below)
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
