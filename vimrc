@@ -207,6 +207,7 @@ elseif has("win32")
     let g:ctrlp_cache_dir = '$HOME/vimfiles/tmp/ctrlp'
     let g:fzf_history_dir = '$HOME/vimfiles/tmp/fzf-history'
 endif
+let g:fzf_layout = { 'down': '30%' }
 
 let g:fern#renderer = "devicons"
 let g:fern#default_hidden = 1
