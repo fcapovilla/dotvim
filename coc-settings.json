@@ -11,5 +11,4 @@
     "pyright.inlayHints.functionReturnTypes": false,
     "git.enableGutters": false,
     "git.realtimeGutters": false,
-    "git.addGBlameToBufferVar": true
 }

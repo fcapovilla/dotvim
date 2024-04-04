@@ -40,7 +40,6 @@ Plug 'lambdalisue/fern-renderer-devicons.vim'
 Plug 'adelarsq/vim-emoji-icon-theme'
 " Other
 Plug 'sheerun/vim-polyglot'
-Plug 'elmar-hinz/vim.typoscript'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/LargeFile'
 Plug 'jasonccox/vim-wayland-clipboard', {'tag': 'v0.1.0'}
@@ -184,9 +183,6 @@ let g:coc_snippet_next = '<tab>'
 
 let g:ale_disable_lsp = 1
 let g:ale_virtualtext_cursor = 0
-
-let g:airline_stl_path_style = 'short'
-let g:airline_section_c = airline#section#create(['file', ' ', 'readonly', '%<', 'coc_status', 'lsp_progress', " %{get(b:, 'coc_git_blame', '')}"])
 
 let g:DevIconsEnableFolderPatternMatching = 0
 
