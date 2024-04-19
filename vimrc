@@ -57,7 +57,7 @@ let g:coc_global_extensions = [
 \ 'coc-tsserver',
 \ '@yaegassy/coc-volar',
 \ 'coc-solargraph',
-\ 'coc-phpls',
+\ '@yaegassy/coc-intelephense',
 \ 'coc-blade',
 \ 'coc-sh',
 \ 'coc-pyright',
