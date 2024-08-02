@@ -156,6 +156,7 @@ let g:solarized_use16=1
 set background=dark
 colorscheme solarized8
 hi link CocCodeLens Comment
+hi link CocFloating Pmenu
 
 " Plugin configuration
 runtime plugin/grepper.vim
