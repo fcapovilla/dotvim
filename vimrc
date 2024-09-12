@@ -30,7 +30,7 @@ Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'mattn/emmet-vim'
 " UI
 Plug 'lifepillar/vim-solarized8'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'bitc/vim-bad-whitespace'
 Plug 'gko/vim-coloresque'
 Plug 'wincent/terminus'
@@ -193,6 +193,16 @@ elseif has("win32")
     let g:fzf_history_dir = '$HOME/vimfiles/tmp/fzf-history'
 endif
 let g:fzf_layout = { 'down': '30%' }
+
+let g:lightline = {
+\  'active': {
+\    'left': [['mode', 'paste'], ['gitbranch', 'readonly'], ['relativepath', 'modified']],
+\    'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype', 'charvaluehex']]
+\  },
+\  'component_function': {
+\    'gitbranch': 'FugitiveHead'
+\  },
+\}
 
 let g:fern#renderer = "devicons"
 let g:fern#default_hidden = 1
