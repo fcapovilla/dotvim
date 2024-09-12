@@ -197,7 +197,7 @@ let g:fzf_layout = { 'down': '30%' }
 let g:lightline = {
 \  'active': {
 \    'left': [['mode', 'paste'], ['gitbranch', 'readonly'], ['relativepath', 'modified']],
-\    'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype', 'charvaluehex']]
+\    'right': [['lineinfo'], ['percent'], ['charvaluehex', 'fileformat', 'fileencoding', 'filetype']]
 \  },
 \  'component_function': {
 \    'gitbranch': 'FugitiveHead',
