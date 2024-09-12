@@ -200,9 +200,14 @@ let g:lightline = {
 \    'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype', 'charvaluehex']]
 \  },
 \  'component_function': {
-\    'gitbranch': 'FugitiveHead'
-\  },
+\    'gitbranch': 'FugitiveHead',
+\    'filetype': 'DevIconsFiletype'
+\  }
 \}
+
+function! DevIconsFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
 
 let g:fern#renderer = "devicons"
 let g:fern#default_hidden = 1
