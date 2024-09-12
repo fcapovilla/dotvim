@@ -195,6 +195,7 @@ endif
 let g:fzf_layout = { 'down': '30%' }
 
 let g:lightline = {
+\  'colorscheme': 'one',
 \  'active': {
 \    'left': [['mode', 'paste'], ['gitbranch', 'readonly'], ['relativepath', 'modified']],
 \    'right': [['lineinfo'], ['percent'], ['charvaluehex', 'fileformat', 'fileencoding', 'filetype']]
