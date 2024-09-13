@@ -200,6 +200,9 @@ let g:lightline = {
 \    'left': [['mode', 'paste'], ['gitbranch', 'readonly'], ['relativepath', 'modified']],
 \    'right': [['lineinfo'], ['percent'], ['charvaluehex', 'fileformat', 'fileencoding', 'filetype']]
 \  },
+\  'inactive': {
+\    'left': [['relativepath']],
+\  },
 \  'component_function': {
 \    'gitbranch': 'FugitiveHead',
 \    'filetype': 'DevIconsFiletype'
