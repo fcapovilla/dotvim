@@ -168,6 +168,8 @@ let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
 let g:grepper.stop = 5000
 
+let g:qf_modifiable = 0
+
 let g:coc_snippet_next = '<tab>'
 
 let g:ale_disable_lsp = 1
