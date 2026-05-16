@@ -5,6 +5,7 @@ Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tweekmonster/fzf-filemru'
 Plug 'mhinz/vim-grepper'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -121,8 +122,9 @@ function! FernToggleFind()
     endif
 endfunction
 
-noremap <leader><Space> <esc>:CtrlPMRUFiles<cr>
+noremap <leader><Space> <esc>:FilesMru --tiebreak=end<cr>
 noremap <leader>f <esc>:Files<cr>
+noremap <leader>m <esc>:CtrlPMRUFiles<cr>
 noremap <leader>t <esc>:call FernToggleFind()<cr>
 noremap <leader>u <esc>:UndotreeToggle<cr>
 noremap <leader>g <esc>:Grepper<cr>
@@ -168,6 +170,8 @@ let g:grepper.prompt_quote = 2
 let g:grepper.highlight = 1
 let g:grepper.stop = 5000
 
+let g:qf_modifiable = 0
+
 let g:coc_snippet_next = '<tab>'
 
 let g:ale_disable_lsp = 1
@@ -194,17 +198,35 @@ elseif has("win32")
 endif
 let g:fzf_layout = { 'down': '30%' }
 
+augroup custom_filemru
+  autocmd!
+  autocmd BufWinEnter * UpdateMru
+augroup END
+
 let g:lightline = {
 \  'colorscheme': 'one',
 \  'active': {
 \    'left': [['mode', 'paste'], ['gitbranch', 'readonly'], ['relativepath', 'modified']],
 \    'right': [['lineinfo'], ['percent'], ['charvaluehex', 'fileformat', 'fileencoding', 'filetype']]
 \  },
+\  'inactive': {
+\    'left': [['gitbranch'], ['relativepath']],
+\  },
 \  'component_function': {
 \    'gitbranch': 'FugitiveHead',
 \    'filetype': 'DevIconsFiletype'
 \  }
 \}
+
+let s:vim_ai_config = {
+\  "options": {
+\    "endpoint_url": "http://localhost:5000/v1/chat/completions",
+\    "auth_type": "none",
+\  },
+\}
+let g:vim_ai_chat = s:vim_ai_config
+let g:vim_ai_complete = s:vim_ai_config
+let g:vim_ai_edit = s:vim_ai_config
 
 function! DevIconsFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
