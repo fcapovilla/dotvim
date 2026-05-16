@@ -12,9 +12,9 @@ Install CoC dependencies with asdf
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
     echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
     echo '. $HOME/.asdf/asdf.sh' >> ~/.zshrc
-    asdf plugin-add nodejs
-    asdf install nodejs 14.20.0
-    asdf global nodejs 14.20.0
+    asdf plugin add nodejs
+    asdf install nodejs 20.19.0
+    asdf global nodejs 20.19.0
     npm install --global yarn
 
 For copy-paste support in Wayland, install `wl-clipboard`.
